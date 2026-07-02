@@ -25,11 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
         container.innerHTML = filtered.map(c => {
             const completedClass = c.completed ? 'completed' : '';
             return `
-        <div class="course-item ${completedClass}">
-          ${c.code}
-          ${c.completed ? '<span class="completed-text">✓ Completed</span>' : ''}
-        </div>
-      `;
+                <div class="course-item ${completedClass}">
+                    ${c.code}
+                    ${c.completed ? '<span class="completed-text">✓ Completed</span>' : ''}
+                </div>
+            `;
         }).join('');
 
         const total = filtered.reduce((sum, c) => sum + c.credits, 0);
