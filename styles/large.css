@@ -1,0 +1,65 @@
+/* large.css – desktop layout */
+@media (min-width: 768px) {
+    body {
+        padding: 0 2rem;
+    }
+
+    /* horizontal nav */
+    .hamburger {
+        display: none;
+    }
+
+    .nav-menu {
+        max-height: none !important;
+        width: auto;
+        overflow: visible;
+        transition: none;
+    }
+
+    .nav-menu ul {
+        flex-direction: row;
+        border-top: none;
+        padding: 0;
+        margin: 0;
+        gap: 0.25rem;
+    }
+
+    .nav-menu a {
+        padding: 0.5rem 1.2rem;
+        border-radius: 4px;
+    }
+
+    /* TOP SECTIONS GRID: About Me (2fr) + Photo (1fr) */
+    .top-sections {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .top-sections .card {
+        margin-bottom: 0;
+    }
+
+    /* Course section spans full width */
+    .course-section {
+        margin-top: 0;
+    }
+
+    /* course grid: 3 columns */
+    .course-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* footer: row */
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .social-links {
+        gap: 1rem;
+    }
+}

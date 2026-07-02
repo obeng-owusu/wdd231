@@ -1,0 +1,281 @@
+/* small.css – base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f2f2f2;
+    color: #222;
+    line-height: 1.6;
+    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ----- HEADER / NAV (dark bar) ----- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    padding: 0.75rem 1rem;
+    border-radius: 0 0 8px 8px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+}
+
+.site-name {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.hamburger .bar {
+    width: 28px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* hamburger → X */
+.hamburger.open .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+
+.hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+}
+
+.nav-menu {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+
+.nav-menu.open {
+    max-height: 300px;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.5rem 0;
+    border-top: 1px solid #444;
+    margin-top: 0.5rem;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 0.6rem 0.75rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: background 0.15s;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus {
+    background: #444;
+}
+
+.nav-menu a.active {
+    background: #666;
+}
+
+/* ----- MAIN ----- */
+main {
+    margin: 1.5rem 0 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+}
+
+/* cards */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+    background: #fff;
+}
+
+.card h2 {
+    background: #222;
+    color: #fff;
+    padding: 0.75rem;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.card-body {
+    padding: 1rem;
+    background: #efefef;
+}
+
+.photo-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.profile-photo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+}
+
+/* course section */
+.course-section {
+    margin-top: 1.5rem;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem 1rem;
+    background: #efefef;
+}
+
+.filter-btn {
+    background: #ddd;
+    border: 1px solid #bbb;
+    padding: 0.4rem 1.2rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    color: #222;
+}
+
+.filter-btn:hover {
+    background: #ccc;
+}
+
+.filter-btn.active {
+    background: #222;
+    color: #fff;
+    border-color: #222;
+}
+
+/* course grid */
+.course-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: #efefef;
+}
+
+.course-item {
+    padding: 0.75rem;
+    text-align: center;
+    border: 1px solid #999;
+    border-radius: 4px;
+    background: #ddd;
+    font-weight: 500;
+}
+
+.course-item.completed {
+    background: #4b5320;
+    color: #fff;
+    border-color: #3a4218;
+}
+
+.completed-text {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+.course-item.completed .completed-text {
+    color: #ffd700;
+}
+
+.total-credits {
+    font-weight: 600;
+    padding: 0.5rem 1rem 1rem;
+    background: #efefef;
+    margin: 0;
+}
+
+/* ----- FOOTER ----- */
+footer {
+    border-top: 2px solid #ccc;
+    padding: 1.5rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.social-links a {
+    color: #222;
+    transition: color 0.15s;
+}
+
+.social-links a:hover {
+    color: #666;
+}
+
+.footer-meta p {
+    font-size: 0.9rem;
+    color: #444;
+}
+
+#lastModified {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* utilities */
+img,
+svg {
+    max-width: 100%;
+    height: auto;
+}
