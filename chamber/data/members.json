@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Appiah & Associates Law",
+        "address": "456 Oak Avenue, City, ST 12345",
+        "phone": "(555) 234-5678",
+        "website": "https://appiahlaw.com",
+        "image": "appiah-law.webp",
+        "membershipLevel": 3,
+        "description": "Full-service law firm serving the community for over 20 years."
+    },
+    {
+        "name": "Asanka Delight",
+        "address": "789 Main Street, City, ST 12345",
+        "phone": "(555) 345-6789",
+        "website": "https://asankadelight.com",
+        "image": "asanka-delight.webp",
+        "membershipLevel": 2,
+        "description": "Fine dining with locally sourced ingredients."
+    },
+    {
+        "name": "Bengtek Solutions Inc.",
+        "address": "101 Tech Park, City, ST 12345",
+        "phone": "(555) 456-7890",
+        "website": "https://bengteksolutions.com",
+        "image": "tek-solutions.webp",
+        "membershipLevel": 3,
+        "description": "IT consulting and managed services for small businesses."
+    },
+    {
+        "name": "Green Valley Realty",
+        "address": "202 Maple Drive, City, ST 12345",
+        "phone": "(555) 567-8901",
+        "website": "https://greenvalleyrealty.com",
+        "image": "green-valley.webp",
+        "membershipLevel": 2,
+        "description": "Helping families find their dream homes since 1995."
+    },
+    {
+        "name": "Evergreen Landscaping",
+        "address": "303 Garden Lane, City, ST 12345",
+        "phone": "(555) 678-9012",
+        "website": "https://evergreenlandscaping.com",
+        "image": "evergreen.webp",
+        "membershipLevel": 1,
+        "description": "Sustainable landscaping and garden design."
+    },
+    {
+        "name": "City Dental Group",
+        "address": "404 Health Way, City, ST 12345",
+        "phone": "(555) 789-0123",
+        "website": "https://citydentalgroup.com",
+        "image": "city-dental.webp",
+        "membershipLevel": 2,
+        "description": "Comprehensive dental care for the whole family."
+    },
+    {
+        "name": "Sunrise Fitness Center",
+        "address": "505 Active Blvd, City, ST 12345",
+        "phone": "(555) 890-1234",
+        "website": "https://sunrisefitness.com",
+        "image": "sunrise-fitness.webp",
+        "membershipLevel": 1,
+        "description": "State-of-the-art fitness facility with group classes."
+    },
+    {
+        "name": "Heritage Bank",
+        "address": "606 Financial Plaza, City, ST 12345",
+        "phone": "(555) 901-2345",
+        "website": "https://heritagebank.com",
+        "image": "heritage-bank.webp",
+        "membershipLevel": 3,
+        "description": "Community banking with a personal touch since 1952."
+    }
+]

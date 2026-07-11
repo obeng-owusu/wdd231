@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Chamber of Commerce - Directory</title>
+    <meta name="description" content="Directory of member businesses for the City Chamber of Commerce">
+    <meta name="author" content="Joshua Owusu Obeng">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Social Media Meta Tags (Open Graph / Facebook) -->
+    <meta property="og:title" content="City Chamber of Commerce - Business Directory">
+    <meta property="og:description"
+        content="Connect with local businesses in our community. Find members, services, and networking opportunities.">
+    <meta property="og:image" content="https://obeng-owusu.github.io/wdd231/chamber/images/og-image.jpg">
+    <meta property="og:url" content="https://obeng-owusu.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="City Chamber of Commerce - Business Directory">
+    <meta name="twitter:description" content="Connect with local businesses in our community.">
+    <meta name="twitter:image" content="https://obeng-owusu.github.io/wdd231/chamber/images/og-image.jpg">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/logo.webp" alt="Chamber Logo" width="60" height="60">
+                <h1>City Chamber</h1>
+            </div>
+            <button id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+        </div>
+        <nav>
+            <ul id="primary-nav">
+                <li><a href="directory.html" class="active">Home</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h2>Member Directory</h2>
+            <div class="view-controls">
+                <button id="grid-view" class="active" aria-label="Grid view">Grid</button>
+                <button id="list-view" aria-label="List view">List</button>
+            </div>
+        </section>
+
+        <div id="members-container" class="grid-view">
+            <!-- Members will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>City Chamber of Commerce</h3>
+                <p>123 Main Street, City, State 12345</p>
+                <p>📞 (555) 123-4567</p>
+                <p>✉️ info@citychamber.com</p>
+            </div>
+            <div class="developer-info">
+                <p>© <span id="year"></span> City Chamber of Commerce</p>
+                <p>Developed by Joshua Obeng - WDD 231</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/directory.js" defer></script>
+</body>
+
+</html>
