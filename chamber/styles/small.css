@@ -20,7 +20,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: var(--light-bg);
     color: var(--dark-text);
     line-height: 1.6;
@@ -53,11 +53,6 @@ header {
 
 .logo img {
     border-radius: 50%;
-}
-
-.logo h1 {
-    font-size: 1.25rem;
-    margin: 0;
 }
 
 #menu-toggle {
@@ -121,6 +116,14 @@ main {
     padding: 1rem;
 }
 
+main h1 {
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--accent-color);
+}
+
 .page-header {
     display: flex;
     flex-direction: column;
@@ -131,7 +134,7 @@ main {
 }
 
 .page-header h2 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     color: var(--primary-color);
 }
 

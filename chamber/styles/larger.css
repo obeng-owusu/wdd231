@@ -3,10 +3,6 @@
 @media only screen and (min-width: 32rem) {
 
     /* ===== HEADER ===== */
-    .logo h1 {
-        font-size: 1.75rem;
-    }
-
     #menu-toggle {
         display: none;
     }
@@ -34,6 +30,11 @@
         border-bottom-color: var(--accent-color);
     }
 
+    /* ===== MAIN ===== */
+    main h1 {
+        font-size: 2.25rem;
+    }
+
     /* ===== PAGE HEADER ===== */
     .page-header {
         flex-direction: row;
@@ -42,7 +43,7 @@
     }
 
     .page-header h2 {
-        font-size: 2.25rem;
+        font-size: 2rem;
     }
 
     /* ===== MEMBERS GRID ===== */

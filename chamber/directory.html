@@ -8,6 +8,11 @@
     <meta name="description" content="Directory of member businesses for the City Chamber of Commerce">
     <meta name="author" content="Joshua Owusu Obeng">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
@@ -15,7 +20,7 @@
     <meta property="og:title" content="City Chamber of Commerce - Business Directory">
     <meta property="og:description"
         content="Connect with local businesses in our community. Find members, services, and networking opportunities.">
-    <meta property="og:image" content="https://obeng-owusu.github.io/wdd231/chamber/images/og-image.jpg">
+    <meta property="og:image" content="https://obeng-owusu.github.io/wdd231/chamber/images/logo.webp">
     <meta property="og:url" content="https://obeng-owusu.github.io/wdd231/chamber/directory.html">
     <meta property="og:type" content="website">
 
@@ -23,21 +28,23 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="City Chamber of Commerce - Business Directory">
     <meta name="twitter:description" content="Connect with local businesses in our community.">
-    <meta name="twitter:image" content="https://obeng-owusu.github.io/wdd231/chamber/images/og-image.jpg">
+    <meta name="twitter:image" content="https://obeng-owusu.github.io/wdd231/chamber/images/logo.webp">
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- JavaScript - in head with defer -->
+    <script src="scripts/directory.js" defer></script>
 </head>
 
 <body>
-
     <header>
         <div class="header-content">
             <div class="logo">
                 <img src="images/logo.webp" alt="Chamber Logo" width="60" height="60">
-                <h1>City Chamber</h1>
+                <!-- h1 moved to main -->
             </div>
             <button id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
         </div>
@@ -53,6 +60,8 @@
     </header>
 
     <main>
+        <h1>City Chamber of Commerce - Directory</h1>
+
         <section class="page-header">
             <h2>Member Directory</h2>
             <div class="view-controls">
@@ -76,14 +85,11 @@
             </div>
             <div class="developer-info">
                 <p>© <span id="year"></span> City Chamber of Commerce</p>
-                <p>Developed by Joshua Obeng - WDD 231</p>
+                <p>Developed by Joshua Owusu Obeng - WDD 231</p>
                 <p>Last Modified: <span id="last-modified"></span></p>
             </div>
         </div>
     </footer>
-
-    <!-- JavaScript -->
-    <script src="scripts/directory.js" defer></script>
 </body>
 
 </html>
