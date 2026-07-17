@@ -1,94 +1,79 @@
-/* Larger.css - Tablet/Desktop (32rem and up) */
+/* ===== HOME PAGE LARGER VIEWS ===== */
 
 @media only screen and (min-width: 32rem) {
 
-    /* ===== HEADER ===== */
-    #menu-toggle {
-        display: none;
+    /* Hero Content */
+    .hero-content h1 {
+        font-size: 2.5rem;
     }
 
-    nav {
-        max-height: none !important;
-        overflow: visible;
+    .hero-content p {
+        font-size: 1.2rem;
     }
 
-    #primary-nav {
-        flex-direction: row;
-        justify-content: flex-end;
-        padding: 0;
-        gap: 1.5rem;
-    }
-
-    #primary-nav li a {
-        padding: 0.5rem 0;
-        border-bottom: 3px solid transparent;
-    }
-
-    #primary-nav li a:hover,
-    #primary-nav li a.active {
-        background: none;
-        border-bottom-color: var(--accent-color);
-    }
-
-    /* ===== MAIN ===== */
-    main h1 {
-        font-size: 2.25rem;
-    }
-
-    /* ===== PAGE HEADER ===== */
-    .page-header {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .page-header h2 {
-        font-size: 2rem;
-    }
-
-    /* ===== MEMBERS GRID ===== */
-    #members-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-
-    /* ===== LIST VIEW - IMAGES HIDDEN ===== */
-    #members-container.list-view .member-card img {
-        display: none;
-        /* Images removed per rubric requirement */
-    }
-
-    #members-container.list-view .member-card {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        /* Image column removed */
-        align-items: center;
-        text-align: left;
-        padding: 1rem 1.5rem;
-        gap: 1rem;
-    }
-
-    /* ===== FOOTER ===== */
-    .footer-content {
+    /* Home Grid - 2 columns */
+    .home-grid {
         grid-template-columns: 1fr 1fr;
-        text-align: left;
     }
 
-    .developer-info {
-        border-top: none;
-        padding-top: 0;
-        text-align: right;
+    /* Events spans full width on tablet */
+    .events-section {
+        grid-column: 1 / -1;
     }
-}
 
-@media only screen and (min-width: 48rem) {
-    #members-container {
+    /* Weather and Spotlight in 2 columns */
+    .weather-section {
+        grid-column: 1 / 2;
+    }
+
+    .spotlight-section {
+        grid-column: 2 / 3;
+    }
+
+    /* Spotlight container - 2 columns */
+    .spotlight-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Forecast - 3 columns */
+    .forecast-container {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
+@media only screen and (min-width: 48rem) {
+
+    /* Spotlight container - 3 columns on larger screens */
+    .spotlight-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
 @media only screen and (min-width: 64rem) {
-    #members-container {
-        grid-template-columns: repeat(4, 1fr);
+
+    /* Home Grid - 3 columns on desktop */
+    .home-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    /* Events spans full width */
+    .events-section {
+        grid-column: 1 / -1;
+    }
+
+    /* Weather and Spotlight in right column */
+    .weather-section {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    .spotlight-section {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    /* Spotlight container - 2 columns on desktop */
+    .spotlight-container {
+        grid-template-columns: 1fr 1fr;
     }
 }
