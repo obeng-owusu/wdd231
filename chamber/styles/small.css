@@ -32,7 +32,8 @@
     max-width: 700px;
 }
 
-.hero-content h1 {
+/* FIXED: Changed from h1 to h2 */
+.hero-content h2 {
     font-size: 1.8rem;
     color: white;
     border-bottom: none;
@@ -204,6 +205,13 @@
     font-size: 0.85rem;
     color: #555;
     margin-bottom: 0.2rem;
+}
+
+.spotlight-card .description {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.5rem;
+    font-style: italic;
 }
 
 .spotlight-card .website-link {

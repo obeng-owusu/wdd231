@@ -23,10 +23,13 @@ document.querySelectorAll('#primary-nav a').forEach(link => {
 
 // ===== Weather API =====
 async function fetchWeather() {
-    const apiKey = 'YOUR_API_KEY'; // Replace with your OpenWeatherMap API key
-    // Using coordinates for your city - replace with your actual coordinates
-    const lat = 40.7128; // Example: New York City
-    const lon = -74.0060; // Example: New York City
+    // FIXED: Replace with your actual OpenWeatherMap API key
+    const apiKey = '9bxxxxxxxxxxxxxxxxxxxxxxxx'; // <-- PUT YOUR REAL API KEY HERE
+
+    // FIXED: Replace with your chamber city's coordinates
+    // Example for Accra, Ghana:
+    const lat = 5.6037;
+    const lon = -0.1870;
 
     // Current weather URL with imperial units (Fahrenheit)
     const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
@@ -45,9 +48,7 @@ async function fetchWeather() {
         document.getElementById('weather-description').textContent = weatherData.weather[0].description;
         document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`;
         document.getElementById('weather-icon').alt = weatherData.weather[0].description;
-
-        // Update location
-        document.querySelector('.weather-info .location').textContent = weatherData.name;
+        document.getElementById('weather-location').textContent = weatherData.name;
 
         // Fetch 5-day forecast
         const forecastResponse = await fetch(forecastUrl);
@@ -56,15 +57,32 @@ async function fetchWeather() {
 
         // Get one forecast per day for the next 3 days (at 12:00 PM each day)
         const forecastList = forecastData.list.filter(item => item.dt_txt.includes('12:00:00'));
-        const dayNames = ['Today', 'Tomorrow', 'Day 3'];
+
+        // FIXED: Build forecast HTML with separate day name and temperature
+        const forecastContainer = document.getElementById('forecast-container');
+        forecastContainer.innerHTML = '';
 
         for (let i = 0; i < 3 && i < forecastList.length; i++) {
-            const dayElement = document.getElementById(`forecast-day${i + 1}`);
-            if (dayElement) {
-                const temp = Math.round(forecastList[i].main.temp);
-                const dayName = i === 0 ? 'Today' : new Date(forecastList[i].dt * 1000).toLocaleDateString('en-US', { weekday: 'short' });
-                dayElement.textContent = `${dayName}: ${temp}°F`;
+            const forecastDay = document.createElement('div');
+            forecastDay.className = 'forecast-day';
+
+            const dayName = document.createElement('p');
+            dayName.className = 'forecast-day-name';
+
+            if (i === 0) {
+                dayName.textContent = 'Today';
+            } else {
+                const date = new Date(forecastList[i].dt * 1000);
+                dayName.textContent = date.toLocaleDateString('en-US', { weekday: 'long' });
             }
+
+            const dayTemp = document.createElement('p');
+            dayTemp.className = 'forecast-temp';
+            dayTemp.textContent = `${Math.round(forecastList[i].main.temp)}°F`;
+
+            forecastDay.appendChild(dayName);
+            forecastDay.appendChild(dayTemp);
+            forecastContainer.appendChild(forecastDay);
         }
 
     } catch (error) {
@@ -122,6 +140,8 @@ function displaySpotlights(spotlights) {
             <span class="membership-level level-${member.membershipLevel === 3 ? 'gold' : 'silver'}">
                 ${member.membershipLevel === 3 ? '⭐ Gold Member' : '⭐ Silver Member'}
             </span>
+            <!-- FIXED: Added description for more informative spotlights -->
+            <p class="description">${member.description}</p>
         </div>
     `).join('');
 }

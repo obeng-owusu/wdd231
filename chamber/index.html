@@ -21,7 +21,8 @@
     <meta property="og:title" content="City Chamber of Commerce - Home">
     <meta property="og:description"
         content="Welcome to the City Chamber of Commerce - Supporting local businesses and economic growth in our community.">
-    <meta property="og:image" content="https://obeng-owusu.github.io/wdd231/chamber/images/logo.webp">
+    <!-- FIXED: Using hero image for better social preview -->
+    <meta property="og:image" content="https://obeng-owusu.github.io/wdd231/chamber/images/hero-large.webp">
     <meta property="og:url" content="https://obeng-owusu.github.io/wdd231/chamber/index.html">
     <meta property="og:type" content="website">
 
@@ -29,7 +30,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="City Chamber of Commerce - Home">
     <meta name="twitter:description" content="Welcome to the City Chamber of Commerce - Supporting local businesses.">
-    <meta name="twitter:image" content="https://obeng-owusu.github.io/wdd231/chamber/images/logo.webp">
+    <!-- FIXED: Using hero image for better social preview -->
+    <meta name="twitter:image" content="https://obeng-owusu.github.io/wdd231/chamber/images/hero-large.webp">
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
@@ -68,12 +70,14 @@
             <picture>
                 <source srcset="images/hero-large.webp" media="(min-width: 1024px)">
                 <source srcset="images/hero-medium.webp" media="(min-width: 640px)">
-                <img src="images/hero-small.webp" alt="City Chamber of Commerce" loading="lazy">
+                <!-- FIXED: Removed lazy-load for above-the-fold hero image -->
+                <img src="images/hero-small.webp" alt="City Chamber of Commerce">
             </picture>
             <div class="hero-content">
                 <h2>Welcome to the City Chamber of Commerce</h2>
                 <p>Supporting local businesses and economic growth in our community</p>
-                <a href="#" class="cta-button">Join Today</a>
+                <!-- FIXED: Updated to link to join.html -->
+                <a href="join.html" class="cta-button">Join Today</a>
             </div>
         </section>
 
@@ -113,29 +117,19 @@
                 <h2>Weather</h2>
                 <div class="weather-current">
                     <div class="weather-icon">
-                        <img id="weather-icon" src="" alt="Weather icon">
+                        <!-- FIXED: Added placeholder image -->
+                        <img id="weather-icon" src="images/weather-placeholder.webp" alt="Current weather">
                     </div>
                     <div class="weather-info">
                         <p class="temperature" id="current-temp">--°F</p>
                         <p class="description" id="weather-description">Loading...</p>
-                        <p class="location">City, State</p>
+                        <p class="location" id="weather-location">City, State</p>
                     </div>
                 </div>
                 <div class="weather-forecast">
                     <h3>3-Day Forecast</h3>
                     <div class="forecast-container" id="forecast-container">
-                        <div class="forecast-day">
-                            <p class="forecast-day-name">Day 1</p>
-                            <p class="forecast-temp" id="forecast-day1">--°F</p>
-                        </div>
-                        <div class="forecast-day">
-                            <p class="forecast-day-name">Day 2</p>
-                            <p class="forecast-temp" id="forecast-day2">--°F</p>
-                        </div>
-                        <div class="forecast-day">
-                            <p class="forecast-day-name">Day 3</p>
-                            <p class="forecast-temp" id="forecast-day3">--°F</p>
-                        </div>
+                        <!-- Forecast days will be dynamically inserted -->
                     </div>
                 </div>
             </section>
