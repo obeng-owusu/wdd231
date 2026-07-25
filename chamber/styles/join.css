@@ -2,7 +2,8 @@
 
 .join-intro {
     font-size: 1.1rem;
-    color: #555;
+    color: #333;
+    /* Darker for better readability */
     margin-bottom: 2rem;
     text-align: center;
 }
@@ -35,7 +36,16 @@ form label {
     display: block;
     margin-bottom: 1.2rem;
     font-weight: 600;
-    color: var(--primary-color);
+    color: #1a3a5c;
+    /* Darker than var(--primary-color) for better contrast */
+}
+
+/* Required field indicator - not color-dependent */
+form label .required-indicator {
+    color: #b71c1c;
+    /* Dark red with good contrast */
+    font-weight: 700;
+    margin-left: 0.2rem;
 }
 
 form input,
@@ -44,11 +54,24 @@ form textarea {
     width: 100%;
     padding: 0.75rem;
     font-size: 1rem;
-    border: 2px solid #ddd;
+    border: 2px solid #999;
+    /* Darker border for better visibility */
     border-radius: var(--border-radius);
     font-family: 'Roboto', sans-serif;
     transition: border-color var(--transition), box-shadow var(--transition);
     margin-top: 0.3rem;
+    background-color: #fff;
+    color: #222;
+    /* Dark text for better readability */
+}
+
+/* Placeholder text - improved contrast */
+form input::placeholder,
+form textarea::placeholder {
+    color: #666;
+    /* Much better than default light gray */
+    opacity: 1;
+    /* Prevents Firefox from reducing opacity */
 }
 
 form input:focus,
@@ -56,15 +79,35 @@ form select:focus,
 form textarea:focus {
     outline: none;
     border-color: var(--secondary-color);
-    box-shadow: 0 0 0 3px rgba(0, 90, 140, 0.1);
+    box-shadow: 0 0 0 3px rgba(0, 90, 140, 0.25);
+    /* Slightly darker shadow */
 }
 
+/* Error states - better contrast */
 form input:required:invalid:not(:placeholder-shown) {
-    border-color: #e74c3c;
+    border-color: #b71c1c;
+    /* Darker red for better visibility */
+    background-color: #fff5f5;
+    /* Subtle background change */
 }
 
 form input:required:valid:not(:placeholder-shown) {
-    border-color: #2ecc71;
+    border-color: #1e7e34;
+    /* Darker green for better visibility */
+}
+
+/* Error message styling */
+form .error-message {
+    display: block;
+    color: #b71c1c;
+    /* Dark red with good contrast */
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: 0.2rem;
+    padding: 0.3rem 0.5rem;
+    background-color: #fff5f5;
+    border-radius: 4px;
+    border-left: 3px solid #b71c1c;
 }
 
 form textarea {
@@ -78,8 +121,9 @@ form .hint {
     font-size: 0.8rem;
     font-weight: 400;
     color: #555;
-    /* Changed from #888 to #555 for better contrast (4.5:1 minimum) */
+    /* Passes WCAG AA (5.9:1) */
     margin-top: 0.2rem;
+    font-style: italic;
 }
 
 /* ===== SUBMIT BUTTON ===== */
@@ -100,6 +144,11 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background: var(--primary-color);
     transform: scale(1.02);
+}
+
+input[type="submit"]:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
 }
 
 /* ===== MEMBERSHIP CARDS SECTION ===== */
@@ -130,7 +179,8 @@ input[type="submit"]:hover {
     border-radius: var(--border-radius);
     padding: 1.5rem;
     text-align: center;
-    border: 2px solid #e0e0e0;
+    border: 2px solid #999;
+    /* Darker border for better visibility */
     transition: transform var(--transition), box-shadow var(--transition);
     opacity: 0;
     transform: translateY(30px);
@@ -156,36 +206,42 @@ input[type="submit"]:hover {
 /* Card hover effects */
 .membership-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Individual card colors on hover */
+/* Individual card colors on hover - with sufficient contrast */
 #np-card:hover {
-    border-color: #2ecc71;
+    border-color: #1a7a34;
+    /* Darker green */
 }
 
 #bronze-card:hover {
-    border-color: #cd7f32;
+    border-color: #8b6914;
+    /* Darker bronze */
 }
 
 #silver-card:hover {
-    border-color: #c0c0c0;
+    border-color: #8a8a8a;
+    /* Darker silver */
 }
 
 #gold-card:hover {
-    border-color: #f4c542;
+    border-color: #b8960f;
+    /* Darker gold */
 }
 
 .membership-card h3 {
     font-size: 1.3rem;
-    color: var(--primary-color);
+    color: #1a3a5c;
+    /* Darker for better contrast */
     margin-bottom: 0.3rem;
 }
 
 .membership-card .fee {
     font-size: 1.2rem;
     font-weight: 700;
-    color: var(--secondary-color);
+    color: #004d7c;
+    /* Darker secondary color for better contrast */
     margin-bottom: 1rem;
 }
 
@@ -199,7 +255,8 @@ input[type="submit"]:hover {
 .membership-card ul li {
     padding: 0.3rem 0;
     font-size: 0.9rem;
-    color: #555;
+    color: #444;
+    /* Better contrast than #555 */
 }
 
 .membership-card .modal-trigger {
@@ -228,7 +285,8 @@ input[type="submit"]:hover {
 }
 
 .membership-modal::backdrop {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
+    /* Darker backdrop for better contrast */
     backdrop-filter: blur(4px);
 }
 
@@ -239,7 +297,7 @@ input[type="submit"]:hover {
     position: relative;
     max-height: 80vh;
     overflow-y: auto;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 .modal-close {
@@ -250,17 +308,25 @@ input[type="submit"]:hover {
     border: none;
     font-size: 2rem;
     cursor: pointer;
-    color: #888;
+    color: #555;
+    /* Better contrast than #888 */
     transition: color var(--transition);
     line-height: 1;
 }
 
 .modal-close:hover {
-    color: var(--primary-color);
+    color: #1a3a5c;
+    /* Darker for better visibility */
+}
+
+.modal-close:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
 }
 
 .membership-modal h2 {
-    color: var(--primary-color);
+    color: #1a3a5c;
+    /* Darker for better contrast */
     border-bottom: 3px solid var(--accent-color);
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
@@ -275,8 +341,10 @@ input[type="submit"]:hover {
 
 .membership-modal ul li {
     padding: 0.5rem 0;
-    border-bottom: 1px solid #f0f0f0;
-    color: #444;
+    border-bottom: 1px solid #e8e8e8;
+    /* Slightly darker border */
+    color: #333;
+    /* Better contrast than #444 */
 }
 
 .membership-modal ul li:last-child {
@@ -284,15 +352,18 @@ input[type="submit"]:hover {
 }
 
 .membership-modal p {
-    color: #555;
+    color: #444;
+    /* Better contrast than #555 */
 }
 
 .membership-modal p strong {
-    color: var(--secondary-color);
+    color: #004d7c;
+    /* Darker secondary color */
 }
 
 .membership-modal p em {
-    color: var(--primary-color);
+    color: #1a3a5c;
+    /* Darker primary color */
     font-style: italic;
 }
 
@@ -335,7 +406,7 @@ form textarea:focus-visible,
 .membership-card .modal-trigger:focus-visible,
 .modal-close:focus-visible {
     outline: 3px solid var(--accent-color);
-    outline-offset: 2px;
+    outline-offset: 3px;
 }
 
 /* ===== ACCESSIBILITY: Reduced Motion ===== */
@@ -356,4 +427,182 @@ form textarea:focus-visible,
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
+}
+
+/* ===== THANK YOU PAGE SPECIFIC STYLES ===== */
+
+.thankyou-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/* ===== THANK YOU MESSAGE ===== */
+.thankyou-message {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    padding: 2.5rem;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+.thankyou-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.thankyou-message h2 {
+    color: #004d7c;
+    /* Darker secondary color */
+    margin-bottom: 1rem;
+}
+
+.thankyou-message p {
+    color: #444;
+    /* Better contrast than #555 */
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.thankyou-message .next-steps {
+    font-weight: 700;
+    color: #1a3a5c;
+    /* Darker primary color */
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.thankyou-message ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    display: inline-block;
+    text-align: left;
+}
+
+.thankyou-message ul li {
+    padding: 0.4rem 0;
+    color: #444;
+    /* Better contrast than #555 */
+    font-size: 1rem;
+}
+
+.thankyou-message .cta-button {
+    display: inline-block;
+    padding: 0.8rem 2.5rem;
+    background-color: var(--accent-color);
+    color: #1a3a5c;
+    /* Darker text for better contrast */
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: var(--border-radius);
+    transition: background var(--transition), transform var(--transition);
+    margin-top: 0.5rem;
+    border: 2px solid transparent;
+}
+
+.thankyou-message .cta-button:hover {
+    background-color: #d4b033;
+    transform: scale(1.05);
+}
+
+.thankyou-message .cta-button:focus-visible {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 3px;
+}
+
+/* ===== APPLICATION SUMMARY ===== */
+.application-summary {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    padding: 2rem;
+    border: 1px solid #e0e0e0;
+}
+
+.application-summary h2 {
+    color: #1a3a5c;
+    /* Darker primary color */
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+}
+
+.summary-item {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #e8e8e8;
+    /* Slightly darker border */
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+.summary-label {
+    font-weight: 700;
+    color: #1a3a5c;
+    /* Darker primary color */
+    min-width: 160px;
+    padding-right: 1rem;
+}
+
+.summary-value {
+    color: #444;
+    /* Better contrast than #555 */
+    word-break: break-word;
+}
+
+/* ===== RESPONSIVE: TABLET AND UP ===== */
+@media only screen and (min-width: 32rem) {
+    .thankyou-container {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+
+    .summary-item {
+        flex-wrap: nowrap;
+    }
+}
+
+/* ===== RESPONSIVE: DESKTOP ===== */
+@media only screen and (min-width: 64rem) {
+    .thankyou-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+    }
+}
+
+/* ===== MOBILE FRIENDLY ADJUSTMENTS ===== */
+@media only screen and (max-width: 31.99rem) {
+    .summary-label {
+        min-width: 100%;
+        margin-bottom: 0.2rem;
+    }
+
+    .thankyou-message {
+        padding: 1.5rem;
+    }
+
+    .thankyou-message h2 {
+        font-size: 1.3rem;
+    }
+
+    .thankyou-message p {
+        font-size: 1rem;
+    }
+}
+
+/* ===== ACCESSIBILITY: Focus States ===== */
+.thankyou-message .cta-button:focus-visible {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 3px;
 }
