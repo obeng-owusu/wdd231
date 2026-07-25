@@ -3,7 +3,6 @@
 .join-intro {
     font-size: 1.1rem;
     color: #333;
-    /* Darker for better readability */
     margin-bottom: 2rem;
     text-align: center;
 }
@@ -37,13 +36,10 @@ form label {
     margin-bottom: 1.2rem;
     font-weight: 600;
     color: #1a3a5c;
-    /* Darker than var(--primary-color) for better contrast */
 }
 
-/* Required field indicator - not color-dependent */
 form label .required-indicator {
     color: #b71c1c;
-    /* Dark red with good contrast */
     font-weight: 700;
     margin-left: 0.2rem;
 }
@@ -55,23 +51,18 @@ form textarea {
     padding: 0.75rem;
     font-size: 1rem;
     border: 2px solid #999;
-    /* Darker border for better visibility */
     border-radius: var(--border-radius);
     font-family: 'Roboto', sans-serif;
     transition: border-color var(--transition), box-shadow var(--transition);
     margin-top: 0.3rem;
     background-color: #fff;
     color: #222;
-    /* Dark text for better readability */
 }
 
-/* Placeholder text - improved contrast */
 form input::placeholder,
 form textarea::placeholder {
     color: #666;
-    /* Much better than default light gray */
     opacity: 1;
-    /* Prevents Firefox from reducing opacity */
 }
 
 form input:focus,
@@ -80,27 +71,20 @@ form textarea:focus {
     outline: none;
     border-color: var(--secondary-color);
     box-shadow: 0 0 0 3px rgba(0, 90, 140, 0.25);
-    /* Slightly darker shadow */
 }
 
-/* Error states - better contrast */
 form input:required:invalid:not(:placeholder-shown) {
     border-color: #b71c1c;
-    /* Darker red for better visibility */
     background-color: #fff5f5;
-    /* Subtle background change */
 }
 
 form input:required:valid:not(:placeholder-shown) {
     border-color: #1e7e34;
-    /* Darker green for better visibility */
 }
 
-/* Error message styling */
 form .error-message {
     display: block;
     color: #b71c1c;
-    /* Dark red with good contrast */
     font-size: 0.8rem;
     font-weight: 500;
     margin-top: 0.2rem;
@@ -115,13 +99,11 @@ form textarea {
     resize: vertical;
 }
 
-/* ===== FIXED: Better contrast for hint text ===== */
 form .hint {
     display: block;
     font-size: 0.8rem;
     font-weight: 400;
     color: #555;
-    /* Passes WCAG AA (5.9:1) */
     margin-top: 0.2rem;
     font-style: italic;
 }
@@ -180,13 +162,11 @@ input[type="submit"]:focus-visible {
     padding: 1.5rem;
     text-align: center;
     border: 2px solid #999;
-    /* Darker border for better visibility */
     transition: transform var(--transition), box-shadow var(--transition);
     opacity: 0;
     transform: translateY(30px);
 }
 
-/* ===== CARD ANIMATION ===== */
 .membership-card.card-animate {
     animation: cardSlideUp 0.6s ease forwards;
 }
@@ -203,37 +183,30 @@ input[type="submit"]:focus-visible {
     }
 }
 
-/* Card hover effects */
 .membership-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Individual card colors on hover - with sufficient contrast */
 #np-card:hover {
     border-color: #1a7a34;
-    /* Darker green */
 }
 
 #bronze-card:hover {
     border-color: #8b6914;
-    /* Darker bronze */
 }
 
 #silver-card:hover {
     border-color: #8a8a8a;
-    /* Darker silver */
 }
 
 #gold-card:hover {
     border-color: #b8960f;
-    /* Darker gold */
 }
 
 .membership-card h3 {
     font-size: 1.3rem;
     color: #1a3a5c;
-    /* Darker for better contrast */
     margin-bottom: 0.3rem;
 }
 
@@ -241,7 +214,6 @@ input[type="submit"]:focus-visible {
     font-size: 1.2rem;
     font-weight: 700;
     color: #004d7c;
-    /* Darker secondary color for better contrast */
     margin-bottom: 1rem;
 }
 
@@ -256,7 +228,6 @@ input[type="submit"]:focus-visible {
     padding: 0.3rem 0;
     font-size: 0.9rem;
     color: #444;
-    /* Better contrast than #555 */
 }
 
 .membership-card .modal-trigger {
@@ -286,7 +257,6 @@ input[type="submit"]:focus-visible {
 
 .membership-modal::backdrop {
     background: rgba(0, 0, 0, 0.7);
-    /* Darker backdrop for better contrast */
     backdrop-filter: blur(4px);
 }
 
@@ -309,14 +279,12 @@ input[type="submit"]:focus-visible {
     font-size: 2rem;
     cursor: pointer;
     color: #555;
-    /* Better contrast than #888 */
     transition: color var(--transition);
     line-height: 1;
 }
 
 .modal-close:hover {
     color: #1a3a5c;
-    /* Darker for better visibility */
 }
 
 .modal-close:focus-visible {
@@ -326,7 +294,6 @@ input[type="submit"]:focus-visible {
 
 .membership-modal h2 {
     color: #1a3a5c;
-    /* Darker for better contrast */
     border-bottom: 3px solid var(--accent-color);
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
@@ -342,9 +309,7 @@ input[type="submit"]:focus-visible {
 .membership-modal ul li {
     padding: 0.5rem 0;
     border-bottom: 1px solid #e8e8e8;
-    /* Slightly darker border */
     color: #333;
-    /* Better contrast than #444 */
 }
 
 .membership-modal ul li:last-child {
@@ -353,17 +318,14 @@ input[type="submit"]:focus-visible {
 
 .membership-modal p {
     color: #444;
-    /* Better contrast than #555 */
 }
 
 .membership-modal p strong {
     color: #004d7c;
-    /* Darker secondary color */
 }
 
 .membership-modal p em {
     color: #1a3a5c;
-    /* Darker primary color */
     font-style: italic;
 }
 
@@ -377,14 +339,6 @@ input[type="submit"]:focus-visible {
     .membership-cards {
         grid-template-columns: 1fr 1fr;
     }
-
-    .membership-card {
-        transform: translateY(30px);
-    }
-
-    .membership-card.card-animate {
-        animation: cardSlideUp 0.6s ease forwards;
-    }
 }
 
 /* ===== RESPONSIVE: DESKTOP ===== */
@@ -392,10 +346,6 @@ input[type="submit"]:focus-visible {
     .join-container {
         grid-template-columns: 1fr 1fr;
         gap: 2.5rem;
-    }
-
-    .membership-cards {
-        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -454,13 +404,11 @@ form textarea:focus-visible,
 
 .thankyou-message h2 {
     color: #004d7c;
-    /* Darker secondary color */
     margin-bottom: 1rem;
 }
 
 .thankyou-message p {
     color: #444;
-    /* Better contrast than #555 */
     font-size: 1.1rem;
     line-height: 1.7;
 }
@@ -468,7 +416,6 @@ form textarea:focus-visible,
 .thankyou-message .next-steps {
     font-weight: 700;
     color: #1a3a5c;
-    /* Darker primary color */
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
 }
@@ -484,7 +431,6 @@ form textarea:focus-visible,
 .thankyou-message ul li {
     padding: 0.4rem 0;
     color: #444;
-    /* Better contrast than #555 */
     font-size: 1rem;
 }
 
@@ -493,7 +439,6 @@ form textarea:focus-visible,
     padding: 0.8rem 2.5rem;
     background-color: var(--accent-color);
     color: #1a3a5c;
-    /* Darker text for better contrast */
     text-decoration: none;
     font-weight: 700;
     border-radius: var(--border-radius);
@@ -523,7 +468,6 @@ form textarea:focus-visible,
 
 .application-summary h2 {
     color: #1a3a5c;
-    /* Darker primary color */
     border-bottom: 3px solid var(--accent-color);
     padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
@@ -540,7 +484,6 @@ form textarea:focus-visible,
     flex-wrap: wrap;
     padding: 0.6rem 0;
     border-bottom: 1px solid #e8e8e8;
-    /* Slightly darker border */
 }
 
 .summary-item:last-child {
@@ -550,14 +493,12 @@ form textarea:focus-visible,
 .summary-label {
     font-weight: 700;
     color: #1a3a5c;
-    /* Darker primary color */
     min-width: 160px;
     padding-right: 1rem;
 }
 
 .summary-value {
     color: #444;
-    /* Better contrast than #555 */
     word-break: break-word;
 }
 
@@ -599,10 +540,4 @@ form textarea:focus-visible,
     .thankyou-message p {
         font-size: 1rem;
     }
-}
-
-/* ===== ACCESSIBILITY: Focus States ===== */
-.thankyou-message .cta-button:focus-visible {
-    outline: 3px solid var(--secondary-color);
-    outline-offset: 3px;
 }
