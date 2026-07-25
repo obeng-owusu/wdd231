@@ -1,8 +1,10 @@
-// ===== Set Timestamp (ISO format) =====
-const timestampInput = document.getElementById("timestamp");
-if (timestampInput) {
-    timestampInput.value = new Date().toISOString();
-}
+// ===== Set Timestamp (ISO format) inside DOMContentLoaded =====
+document.addEventListener("DOMContentLoaded", () => {
+    const timestampInput = document.getElementById("timestamp");
+    if (timestampInput) {
+        timestampInput.value = new Date().toISOString();
+    }
+});
 
 // ===== Modals =====
 document.querySelectorAll(".modal-trigger").forEach(button => {

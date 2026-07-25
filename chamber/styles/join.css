@@ -72,11 +72,13 @@ form textarea {
     resize: vertical;
 }
 
+/* ===== FIXED: Better contrast for hint text ===== */
 form .hint {
     display: block;
     font-size: 0.8rem;
     font-weight: 400;
-    color: #888;
+    color: #555;
+    /* Changed from #888 to #555 for better contrast (4.5:1 minimum) */
     margin-top: 0.2rem;
 }
 
