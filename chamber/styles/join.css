@@ -1,0 +1,357 @@
+/* ===== JOIN PAGE SPECIFIC STYLES ===== */
+
+.join-intro {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* ===== CONTAINER LAYOUT ===== */
+.join-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/* ===== FORM SECTION ===== */
+.form-section {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    padding: 2rem;
+    border: 1px solid #e0e0e0;
+}
+
+.form-section h2 {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ===== FORM ELEMENTS ===== */
+form label {
+    display: block;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: var(--border-radius);
+    font-family: 'Roboto', sans-serif;
+    transition: border-color var(--transition), box-shadow var(--transition);
+    margin-top: 0.3rem;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(0, 90, 140, 0.1);
+}
+
+form input:required:invalid:not(:placeholder-shown) {
+    border-color: #e74c3c;
+}
+
+form input:required:valid:not(:placeholder-shown) {
+    border-color: #2ecc71;
+}
+
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+form .hint {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #888;
+    margin-top: 0.2rem;
+}
+
+/* ===== SUBMIT BUTTON ===== */
+input[type="submit"] {
+    background: var(--secondary-color);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background var(--transition), transform var(--transition);
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+input[type="submit"]:hover {
+    background: var(--primary-color);
+    transform: scale(1.02);
+}
+
+/* ===== MEMBERSHIP CARDS SECTION ===== */
+.membership-cards-section {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    padding: 2rem;
+    border: 1px solid #e0e0e0;
+}
+
+.membership-cards-section h2 {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.membership-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* ===== INDIVIDUAL CARD ===== */
+.membership-card {
+    background: var(--light-bg);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    text-align: center;
+    border: 2px solid #e0e0e0;
+    transition: transform var(--transition), box-shadow var(--transition);
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* ===== CARD ANIMATION ===== */
+.membership-card.card-animate {
+    animation: cardSlideUp 0.6s ease forwards;
+}
+
+@keyframes cardSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Card hover effects */
+.membership-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual card colors on hover */
+#np-card:hover {
+    border-color: #2ecc71;
+}
+
+#bronze-card:hover {
+    border-color: #cd7f32;
+}
+
+#silver-card:hover {
+    border-color: #c0c0c0;
+}
+
+#gold-card:hover {
+    border-color: #f4c542;
+}
+
+.membership-card h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.3rem;
+}
+
+.membership-card .fee {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.membership-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 1.2rem;
+}
+
+.membership-card ul li {
+    padding: 0.3rem 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.membership-card .modal-trigger {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background var(--transition);
+}
+
+.membership-card .modal-trigger:hover {
+    background: var(--primary-color);
+}
+
+/* ===== MODALS ===== */
+.membership-modal {
+    border: none;
+    border-radius: var(--border-radius);
+    max-width: 500px;
+    width: 90%;
+    padding: 0;
+    background: transparent;
+}
+
+.membership-modal::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #888;
+    transition: color var(--transition);
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: var(--primary-color);
+}
+
+.membership-modal h2 {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    padding-right: 2rem;
+}
+
+.membership-modal ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.membership-modal ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    color: #444;
+}
+
+.membership-modal ul li:last-child {
+    border-bottom: none;
+}
+
+.membership-modal p {
+    color: #555;
+}
+
+.membership-modal p strong {
+    color: var(--secondary-color);
+}
+
+.membership-modal p em {
+    color: var(--primary-color);
+    font-style: italic;
+}
+
+/* ===== RESPONSIVE: TABLET AND UP ===== */
+@media only screen and (min-width: 32rem) {
+    .join-container {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+
+    .membership-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .membership-card {
+        transform: translateY(30px);
+    }
+
+    .membership-card.card-animate {
+        animation: cardSlideUp 0.6s ease forwards;
+    }
+}
+
+/* ===== RESPONSIVE: DESKTOP ===== */
+@media only screen and (min-width: 64rem) {
+    .join-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+    }
+
+    .membership-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ===== KEYBOARD NAVIGATION INDICATORS ===== */
+form input:focus-visible,
+form select:focus-visible,
+form textarea:focus-visible,
+.membership-card .modal-trigger:focus-visible,
+.modal-close:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* ===== ACCESSIBILITY: Reduced Motion ===== */
+@media (prefers-reduced-motion: reduce) {
+    .membership-card {
+        opacity: 1;
+        transform: translateY(0);
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .membership-card.card-animate {
+        animation: none !important;
+    }
+
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -1,63 +1,30 @@
-// ===== Footer Copyright Year =====
-document.getElementById('year').textContent = new Date().getFullYear();
-
-// ===== Last Modification Date =====
-document.getElementById('last-modified').textContent = document.lastModified;
-
-// ===== Mobile Menu Toggle =====
-const menuToggle = document.getElementById('menu-toggle');
-const nav = document.querySelector('nav');
-
-menuToggle.addEventListener('click', () => {
-    nav.classList.toggle('open');
-    menuToggle.textContent = nav.classList.contains('open') ? '✕' : '☰';
-});
-
-// Close menu when a link is clicked (for mobile)
-document.querySelectorAll('#primary-nav a').forEach(link => {
-    link.addEventListener('click', () => {
-        nav.classList.remove('open');
-        menuToggle.textContent = '☰';
-    });
-});
-
 // ===== Weather API =====
 async function fetchWeather() {
     // ⚠️ IMPORTANT: Replace with your real OpenWeatherMap API key
-    // Get a free key at: https://openweathermap.org/api
-    const apiKey = 'YOUR_REAL_API_KEY_HERE'; // <-- PUT YOUR REAL API KEY HERE
+    const apiKey = 'YOUR_REAL_API_KEY_HERE';
 
-    // Coordinates for Accra, Ghana (replace with your chamber's city)
     const lat = 5.6037;
     const lon = -0.1870;
 
-    // Current weather URL with imperial units (Fahrenheit)
     const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
-
-    // 5-day forecast URL with imperial units
     const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
 
     try {
-        // Fetch current weather
         const weatherResponse = await fetch(currentWeatherUrl);
         if (!weatherResponse.ok) throw new Error('Weather data not available');
         const weatherData = await weatherResponse.json();
 
-        // Update current weather display
         document.getElementById('current-temp').textContent = `${Math.round(weatherData.main.temp)}°F`;
         document.getElementById('weather-description').textContent = weatherData.weather[0].description;
         document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`;
         document.getElementById('weather-icon').alt = weatherData.weather[0].description;
         document.getElementById('weather-location').textContent = weatherData.name;
 
-        // Fetch 5-day forecast
         const forecastResponse = await fetch(forecastUrl);
         if (!forecastResponse.ok) throw new Error('Forecast data not available');
         const forecastData = await forecastResponse.json();
 
-        // Get one forecast per day for the next 3 days (at 12:00 PM each day)
         const forecastList = forecastData.list.filter(item => item.dt_txt.includes('12:00:00'));
-
         const forecastContainer = document.getElementById('forecast-container');
         forecastContainer.innerHTML = '';
 
@@ -67,8 +34,6 @@ async function fetchWeather() {
 
             const dayName = document.createElement('p');
             dayName.className = 'forecast-day-name';
-
-            // Show actual day names (Monday, Tuesday, Wednesday) - not "Today"
             const date = new Date(forecastList[i].dt * 1000);
             dayName.textContent = date.toLocaleDateString('en-US', { weekday: 'long' });
 
@@ -83,8 +48,10 @@ async function fetchWeather() {
 
     } catch (error) {
         console.error('Error fetching weather:', error);
-        document.getElementById('current-temp').textContent = '--°F';
-        document.getElementById('weather-description').textContent = 'Weather unavailable';
+        const temp = document.getElementById('current-temp');
+        if (temp) temp.textContent = '--°F';
+        const desc = document.getElementById('weather-description');
+        if (desc) desc.textContent = 'Weather unavailable';
     }
 }
 
@@ -97,33 +64,36 @@ async function fetchSpotlights() {
         }
         const members = await response.json();
 
-        // Filter gold (level 3) and silver (level 2) members
         const eligibleMembers = members.filter(member =>
             member.membershipLevel === 3 || member.membershipLevel === 2
         );
 
-        // Randomly select 2-3 members
         const spotlights = getRandomSpotlights(eligibleMembers);
         displaySpotlights(spotlights);
 
     } catch (error) {
         console.error('Error fetching member data:', error);
-        document.getElementById('spotlight-container').innerHTML = `
-            <p style="color: red; text-align: center; padding: 1rem;">
-                ⚠️ Unable to load spotlights. Please try again later.
-            </p>
-        `;
+        const container = document.getElementById('spotlight-container');
+        if (container) {
+            container.innerHTML = `
+                <p style="color: red; text-align: center; padding: 1rem;">
+                    ⚠️ Unable to load spotlights. Please try again later.
+                </p>
+            `;
+        }
     }
 }
 
 function getRandomSpotlights(members) {
-    const count = Math.min(members.length, Math.floor(Math.random() * 2) + 2); // 2 or 3
+    const count = Math.min(members.length, Math.floor(Math.random() * 2) + 2);
     const shuffled = [...members].sort(() => 0.5 - Math.random());
     return shuffled.slice(0, count);
 }
 
 function displaySpotlights(spotlights) {
     const container = document.getElementById('spotlight-container');
+    if (!container) return;
+
     container.innerHTML = spotlights.map(member => `
         <div class="spotlight-card">
             <img src="images/${member.image}" alt="${member.name} logo" loading="lazy">

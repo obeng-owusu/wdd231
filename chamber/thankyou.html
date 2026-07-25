@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Chamber of Commerce - Thank You</title>
+    <meta name="description" content="Thank you for applying to join the City Chamber of Commerce.">
+    <meta name="author" content="Joshua Obeng">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/thankyou.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/logo.webp" alt="Chamber Logo" width="60" height="60">
+            </div>
+            <button id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+        </div>
+        <nav>
+            <ul id="primary-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Thank You!</h1>
+
+        <div class="thankyou-container">
+            <section class="thankyou-message">
+                <div class="thankyou-icon">✅</div>
+                <h2>Your Application Has Been Received</h2>
+                <p>Thank you for applying to join the City Chamber of Commerce. Our team will review your application
+                    and contact you within 2-3 business days.</p>
+                <p class="next-steps">Next steps:</p>
+                <ul>
+                    <li>📧 Check your email for confirmation</li>
+                    <li>📞 Our team may call to verify information</li>
+                    <li>📝 We'll schedule a welcome orientation</li>
+                </ul>
+                <a href="index.html" class="cta-button">Return to Home</a>
+            </section>
+
+            <section class="application-summary">
+                <h2>Application Summary</h2>
+                <div class="summary-grid" id="summary-container">
+                    <!-- Dynamic content from URL parameters will be inserted here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>City Chamber of Commerce</h3>
+                <p>123 Main Street, City, State 12345</p>
+                <p>📞 (555) 123-4567</p>
+                <p>✉️ info@citychamber.com</p>
+            </div>
+            <div class="developer-info">
+                <p>© <span id="year"></span> City Chamber of Commerce</p>
+                <p>Developed by Joshua Obeng - WDD 231</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

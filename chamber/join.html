@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Chamber of Commerce - Join</title>
+    <meta name="description"
+        content="Apply to join the City Chamber of Commerce and become a member of our business community.">
+    <meta name="author" content="Joshua Obeng">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="City Chamber of Commerce - Join">
+    <meta property="og:description"
+        content="Apply to join the City Chamber of Commerce and become a member of our business community.">
+    <meta property="og:image" content="https://obeng-owusu.github.io/wdd231/chamber/images/hero-large.webp">
+    <meta property="og:url" content="https://obeng-owusu.github.io/wdd231/chamber/join.html">
+    <meta property="og:type" content="website">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/logo.webp" alt="Chamber Logo" width="60" height="60">
+            </div>
+            <button id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+        </div>
+        <nav>
+            <ul id="primary-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Join the Chamber</h1>
+        <p class="join-intro">Become a member of the City Chamber of Commerce and help build a stronger business
+            community.</p>
+
+        <div class="join-container">
+            <!-- ===== MEMBERSHIP FORM ===== -->
+            <section class="form-section">
+                <h2>Membership Application</h2>
+                <form id="membership-form" action="thankyou.html" method="get">
+                    <!-- First Name -->
+                    <label for="first-name">
+                        First Name
+                        <input type="text" id="first-name" name="first-name" title="Enter your first name"
+                            autocomplete="given-name" required>
+                    </label>
+
+                    <!-- Last Name -->
+                    <label for="last-name">
+                        Last Name
+                        <input type="text" id="last-name" name="last-name" title="Enter your last name"
+                            autocomplete="family-name" required>
+                    </label>
+
+                    <!-- Organizational Title -->
+                    <label for="org-title">
+                        Organizational Title
+                        <input type="text" id="org-title" name="org-title"
+                            title="Enter your job title (minimum 7 characters, letters, hyphens, and spaces only)"
+                            autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}"
+                            placeholder="e.g., Director-of-Operations">
+                        <small class="hint">Minimum 7 characters. Letters, hyphens, and spaces only.</small>
+                    </label>
+
+                    <!-- Email -->
+                    <label for="email">
+                        Email Address
+                        <input type="email" id="email" name="email" title="Enter your email address"
+                            autocomplete="email" placeholder="you@example.com" required>
+                    </label>
+
+                    <!-- Mobile Phone -->
+                    <label for="phone">
+                        Mobile Phone Number
+                        <input type="tel" id="phone" name="phone" title="Enter your mobile phone number"
+                            autocomplete="tel" required>
+                    </label>
+
+                    <!-- Business/Organization Name -->
+                    <label for="business-name">
+                        Business/Organization Name
+                        <input type="text" id="business-name" name="business-name"
+                            title="Enter your business or organization name" autocomplete="organization" required>
+                    </label>
+
+                    <!-- Membership Level -->
+                    <label for="membership-level">
+                        Membership Level
+                        <select id="membership-level" name="membership-level" required>
+                            <option value="">Select a membership level...</option>
+                            <option value="np">NP Membership (Non-Profit - Free)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+
+                    <!-- Business Description -->
+                    <label for="description">
+                        Business/Organization Description
+                        <textarea id="description" name="description" title="Describe your business or organization"
+                            placeholder="Tell us about your business, products, services, and what you hope to gain from chamber membership..."></textarea>
+                    </label>
+
+                    <!-- Timestamp (hidden) - Using ISO format -->
+                    <input type="hidden" id="timestamp" name="timestamp">
+
+                    <!-- Submit Button -->
+                    <input type="submit" value="Submit Application">
+                </form>
+            </section>
+
+            <!-- ===== MEMBERSHIP LEVEL CARDS ===== -->
+            <section class="membership-cards-section">
+                <h2>Membership Levels</h2>
+                <div class="membership-cards">
+                    <!-- NP Card -->
+                    <div class="membership-card" id="np-card">
+                        <h3>NP Membership</h3>
+                        <p class="fee">Free</p>
+                        <ul>
+                            <li>✓ Basic listing in directory</li>
+                            <li>✓ Access to member events</li>
+                            <li>✓ Monthly newsletter</li>
+                        </ul>
+                        <button class="modal-trigger" data-modal="np-modal">Learn More</button>
+                    </div>
+
+                    <!-- Bronze Card -->
+                    <div class="membership-card" id="bronze-card">
+                        <h3>Bronze</h3>
+                        <p class="fee">$100/year</p>
+                        <ul>
+                            <li>✓ All NP benefits</li>
+                            <li>✓ Enhanced directory listing</li>
+                            <li>✓ Discounted event tickets</li>
+                            <li>✓ Business referral network</li>
+                        </ul>
+                        <button class="modal-trigger" data-modal="bronze-modal">Learn More</button>
+                    </div>
+
+                    <!-- Silver Card -->
+                    <div class="membership-card" id="silver-card">
+                        <h3>Silver</h3>
+                        <p class="fee">$250/year</p>
+                        <ul>
+                            <li>✓ All Bronze benefits</li>
+                            <li>✓ Spotlight position on home page</li>
+                            <li>✓ Free event tickets</li>
+                            <li>✓ Social media promotion</li>
+                            <li>✓ Training workshop access</li>
+                        </ul>
+                        <button class="modal-trigger" data-modal="silver-modal">Learn More</button>
+                    </div>
+
+                    <!-- Gold Card -->
+                    <div class="membership-card" id="gold-card">
+                        <h3>Gold</h3>
+                        <p class="fee">$500/year</p>
+                        <ul>
+                            <li>✓ All Silver benefits</li>
+                            <li>✓ Premium spotlight position</li>
+                            <li>✓ VIP event access</li>
+                            <li>✓ Featured in marketing campaigns</li>
+                            <li>✓ Board of directors eligibility</li>
+                            <li>✓ Exclusive networking events</li>
+                        </ul>
+                        <button class="modal-trigger" data-modal="gold-modal">Learn More</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ===== MODALS ===== -->
+        <!-- NP Modal -->
+        <dialog class="membership-modal" id="np-modal">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+                <h2>NP Membership Benefits</h2>
+                <p><strong>For Non-Profit Organizations</strong></p>
+                <ul>
+                    <li>Free membership for qualifying non-profits</li>
+                    <li>Basic business listing in our online directory</li>
+                    <li>Access to all chamber networking events</li>
+                    <li>Monthly member newsletter with updates and opportunities</li>
+                    <li>Invitation to annual chamber meetings</li>
+                    <li>Access to member-only resources and templates</li>
+                </ul>
+                <p><em>Join us in building a stronger community!</em></p>
+            </div>
+        </dialog>
+
+        <!-- Bronze Modal -->
+        <dialog class="membership-modal" id="bronze-modal">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+                <h2>Bronze Membership Benefits</h2>
+                <p><strong>$100 per year</strong></p>
+                <ul>
+                    <li>All NP membership benefits</li>
+                    <li>Enhanced directory listing with logo and description</li>
+                    <li>Discounted tickets to chamber events and workshops</li>
+                    <li>Access to business referral network</li>
+                    <li>Member spotlight in monthly newsletter</li>
+                    <li>Discount on advertising opportunities</li>
+                </ul>
+                <p><em>Start building your business presence today!</em></p>
+            </div>
+        </dialog>
+
+        <!-- Silver Modal -->
+        <dialog class="membership-modal" id="silver-modal">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+                <h2>Silver Membership Benefits</h2>
+                <p><strong>$250 per year</strong></p>
+                <ul>
+                    <li>All Bronze membership benefits</li>
+                    <li>Premium spotlight position on the chamber home page</li>
+                    <li>Free tickets to all chamber events</li>
+                    <li>Social media promotion across all chamber platforms</li>
+                    <li>Exclusive training workshops and webinars</li>
+                    <li>Priority access to networking events</li>
+                    <li>Quarterly business consultation session</li>
+                </ul>
+                <p><em>Elevate your business to the next level!</em></p>
+            </div>
+        </dialog>
+
+        <!-- Gold Modal -->
+        <dialog class="membership-modal" id="gold-modal">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+                <h2>Gold Membership Benefits</h2>
+                <p><strong>$500 per year</strong></p>
+                <ul>
+                    <li>All Silver membership benefits</li>
+                    <li>Premium spotlight position with maximum visibility</li>
+                    <li>VIP access to all chamber events and galas</li>
+                    <li>Featured in chamber marketing and advertising campaigns</li>
+                    <li>Eligibility for Board of Directors positions</li>
+                    <li>Exclusive CEO/networking roundtable events</li>
+                    <li>Complimentary event sponsorship opportunities</li>
+                    <li>Direct referral service from chamber staff</li>
+                </ul>
+                <p><em>Become a leader in our business community!</em></p>
+            </div>
+        </dialog>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>City Chamber of Commerce</h3>
+                <p>123 Main Street, City, State 12345</p>
+                <p>📞 (555) 123-4567</p>
+                <p>✉️ info@citychamber.com</p>
+            </div>
+            <div class="developer-info">
+                <p>© <span id="year"></span> City Chamber of Commerce</p>
+                <p>Developed by Joshua Obeng - WDD 231</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
