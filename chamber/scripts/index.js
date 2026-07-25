@@ -23,11 +23,11 @@ document.querySelectorAll('#primary-nav a').forEach(link => {
 
 // ===== Weather API =====
 async function fetchWeather() {
-    // FIXED: Replace with your actual OpenWeatherMap API key
-    const apiKey = '9bxxxxxxxxxxxxxxxxxxxxxxxx'; // <-- PUT YOUR REAL API KEY HERE
+    // ⚠️ IMPORTANT: Replace with your real OpenWeatherMap API key
+    // Get a free key at: https://openweathermap.org/api
+    const apiKey = 'YOUR_REAL_API_KEY_HERE'; // <-- PUT YOUR REAL API KEY HERE
 
-    // FIXED: Replace with your chamber city's coordinates
-    // Example for Accra, Ghana:
+    // Coordinates for Accra, Ghana (replace with your chamber's city)
     const lat = 5.6037;
     const lon = -0.1870;
 
@@ -58,7 +58,6 @@ async function fetchWeather() {
         // Get one forecast per day for the next 3 days (at 12:00 PM each day)
         const forecastList = forecastData.list.filter(item => item.dt_txt.includes('12:00:00'));
 
-        // FIXED: Build forecast HTML with separate day name and temperature
         const forecastContainer = document.getElementById('forecast-container');
         forecastContainer.innerHTML = '';
 
@@ -69,12 +68,9 @@ async function fetchWeather() {
             const dayName = document.createElement('p');
             dayName.className = 'forecast-day-name';
 
-            if (i === 0) {
-                dayName.textContent = 'Today';
-            } else {
-                const date = new Date(forecastList[i].dt * 1000);
-                dayName.textContent = date.toLocaleDateString('en-US', { weekday: 'long' });
-            }
+            // Show actual day names (Monday, Tuesday, Wednesday) - not "Today"
+            const date = new Date(forecastList[i].dt * 1000);
+            dayName.textContent = date.toLocaleDateString('en-US', { weekday: 'long' });
 
             const dayTemp = document.createElement('p');
             dayTemp.className = 'forecast-temp';
@@ -140,7 +136,6 @@ function displaySpotlights(spotlights) {
             <span class="membership-level level-${member.membershipLevel === 3 ? 'gold' : 'silver'}">
                 ${member.membershipLevel === 3 ? '⭐ Gold Member' : '⭐ Silver Member'}
             </span>
-            <!-- FIXED: Added description for more informative spotlights -->
             <p class="description">${member.description}</p>
         </div>
     `).join('');
