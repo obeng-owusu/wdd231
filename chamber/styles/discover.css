@@ -326,7 +326,7 @@
 }
 
 /* ================================================================
-   MODAL DIALOG (IMPROVEMENT 5)
+   MODAL DIALOG (IMPROVEMENT 5) - FIXED CONTRAST
    ================================================================ */
 .place-modal {
     border: none;
@@ -360,6 +360,7 @@
     position: relative;
 }
 
+/* ===== CONTRAST FIX: Darker close button for accessibility ===== */
 .place-modal .modal-close {
     position: absolute;
     top: 0.75rem;
@@ -368,13 +369,15 @@
     border: none;
     font-size: 2rem;
     cursor: pointer;
-    color: #999;
+    color: #444;
+    /* Changed from #999 - now passes WCAG AA ✅ */
     transition: color 0.3s ease;
     line-height: 1;
 }
 
 .place-modal .modal-close:hover {
-    color: #333;
+    color: #000;
+    /* Even darker on hover for better visibility */
 }
 
 .place-modal h2 {

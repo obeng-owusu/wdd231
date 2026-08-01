@@ -37,9 +37,9 @@
     <link rel="stylesheet" href="styles/discover.css">
     <link rel="stylesheet" href="styles/larger.css">
 
-    <!-- JavaScript - type="module" for importing JSON data -->
+    <!-- JavaScript - FIXED: Removed defer from module script -->
     <script src="scripts/main.js" defer></script>
-    <script src="scripts/discover.js" type="module" defer></script>
+    <script src="scripts/discover.js" type="module"></script>
 </head>
 
 <body>
@@ -86,7 +86,8 @@
         <dialog id="place-modal" class="place-modal">
             <div class="modal-content">
                 <button type="button" class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
-                <h2 id="modal-title"></h2>
+                <!-- FIXED: Added placeholder text to avoid empty heading warning -->
+                <h2 id="modal-title">Place Details</h2>
                 <address id="modal-address"></address>
                 <p id="modal-description"></p>
             </div>
