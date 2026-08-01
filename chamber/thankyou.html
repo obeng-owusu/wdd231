@@ -31,9 +31,14 @@
     <header>
         <div class="header-content">
             <div class="logo">
+                <!-- IMPROVEMENT 2: Logo already has dimensions, ensure image is optimized -->
                 <img src="images/logo.webp" alt="Chamber Logo" width="60" height="60">
             </div>
-            <button id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+            <!-- IMPROVEMENT 1: Added aria-expanded and aria-controls -->
+            <button id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
+                aria-controls="primary-nav">
+                ☰
+            </button>
         </div>
         <nav>
             <ul id="primary-nav">
@@ -41,7 +46,6 @@
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="discover.html">Discover</a></li>
                 <li><a href="join.html" class="active">Join</a></li>
-                <!-- FIXED: Changed placeholder links to actual pages -->
                 <li><a href="events.html">Events</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>

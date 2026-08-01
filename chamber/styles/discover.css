@@ -1,0 +1,402 @@
+/* styles/discover.css */
+
+/* ============================================
+   VISIT MESSAGE
+   ============================================ */
+.visit-message {
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin: 1rem 0 2rem 0;
+    font-weight: 500;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+}
+
+.visit-message.welcome {
+    background: linear-gradient(135deg, #1ABC9C 0%, #16a085 100%);
+    color: #fff;
+}
+
+.visit-message.soon {
+    background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+    color: #fff;
+}
+
+.visit-message.days {
+    background: linear-gradient(135deg, #0B3C5D 0%, #1a5a7a 100%);
+    color: #fff;
+}
+
+/* ============================================
+   DISCOVER INTRO
+   ============================================ */
+.discover-intro {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+/* ============================================
+   CARDS GRID
+   ============================================ */
+.cards-grid {
+    display: grid;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+/* ============================================
+   INDIVIDUAL CARD - IMPROVEMENT 1: Using article
+   ============================================ */
+.place-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.place-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.place-card figure {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #f0f0f0;
+    position: relative;
+}
+
+.place-card figure img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease, filter 0.4s ease, opacity 0.4s ease;
+}
+
+.place-card .card-content {
+    padding: 1.25rem 1.5rem 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.place-card h2 {
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem 0;
+    color: #0B3C5D;
+}
+
+.place-card address {
+    font-style: normal;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.place-card address::before {
+    content: "📍 ";
+}
+
+.place-card .description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444;
+    flex: 1;
+    margin: 0 0 1rem 0;
+}
+
+/* IMPROVEMENT 2: Button styles remain the same, type will be added in JS */
+.place-card .learn-btn {
+    align-self: flex-start;
+    background: #1ABC9C;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.place-card .learn-btn:hover {
+    background: #16a085;
+    transform: scale(1.03);
+}
+
+/* ================================================================
+   RESPONSIVE GRID-TEMPLATE-AREAS LAYOUTS
+   ================================================================ */
+
+/* --- SMALL SCREENS: 320px to 640px --- */
+/* Single column layout */
+@media (min-width: 320px) and (max-width: 640px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5"
+            "card6"
+            "card7"
+            "card8";
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    /* IMPROVEMENT 6: Using CSS only for grid-area, no JavaScript */
+    .place-card:nth-child(1) {
+        grid-area: card1;
+    }
+
+    .place-card:nth-child(2) {
+        grid-area: card2;
+    }
+
+    .place-card:nth-child(3) {
+        grid-area: card3;
+    }
+
+    .place-card:nth-child(4) {
+        grid-area: card4;
+    }
+
+    .place-card:nth-child(5) {
+        grid-area: card5;
+    }
+
+    .place-card:nth-child(6) {
+        grid-area: card6;
+    }
+
+    .place-card:nth-child(7) {
+        grid-area: card7;
+    }
+
+    .place-card:nth-child(8) {
+        grid-area: card8;
+    }
+
+    .place-card figure img {
+        height: 180px;
+    }
+
+    /* No hover effect on mobile */
+    .place-card figure img:hover {
+        transform: none;
+        filter: none;
+    }
+}
+
+/* --- MEDIUM SCREENS: 641px to 1024px --- */
+/* Two-column asymmetrical layout */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .cards-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "card1 card2"
+            "card3 card3"
+            "card4 card5"
+            "card6 card6"
+            "card7 card8";
+        gap: 1.5rem;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    .place-card:nth-child(1) {
+        grid-area: card1;
+    }
+
+    .place-card:nth-child(2) {
+        grid-area: card2;
+    }
+
+    .place-card:nth-child(3) {
+        grid-area: card3;
+    }
+
+    .place-card:nth-child(4) {
+        grid-area: card4;
+    }
+
+    .place-card:nth-child(5) {
+        grid-area: card5;
+    }
+
+    .place-card:nth-child(6) {
+        grid-area: card6;
+    }
+
+    .place-card:nth-child(7) {
+        grid-area: card7;
+    }
+
+    .place-card:nth-child(8) {
+        grid-area: card8;
+    }
+
+    /* Featured cards (card3 and card6) span full width */
+    .place-card:nth-child(3) figure img,
+    .place-card:nth-child(6) figure img {
+        height: 250px;
+    }
+
+    .place-card figure img {
+        height: 200px;
+    }
+
+    /* No hover effect on tablet */
+    .place-card figure img:hover {
+        transform: none;
+        filter: none;
+    }
+}
+
+/* --- LARGE SCREENS: 1025px and above --- */
+/* Three-column layout with featured spot */
+@media (min-width: 1025px) {
+    .cards-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "card1 card2 card3"
+            "card4 card5 card6"
+            "card7 card8 .";
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    .place-card:nth-child(1) {
+        grid-area: card1;
+    }
+
+    .place-card:nth-child(2) {
+        grid-area: card2;
+    }
+
+    .place-card:nth-child(3) {
+        grid-area: card3;
+    }
+
+    .place-card:nth-child(4) {
+        grid-area: card4;
+    }
+
+    .place-card:nth-child(5) {
+        grid-area: card5;
+    }
+
+    .place-card:nth-child(6) {
+        grid-area: card6;
+    }
+
+    .place-card:nth-child(7) {
+        grid-area: card7;
+    }
+
+    .place-card:nth-child(8) {
+        grid-area: card8;
+    }
+
+    .place-card figure img {
+        height: 220px;
+    }
+
+    /* ===== HOVER EFFECT (Desktop only) ===== */
+    .place-card figure img:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1) saturate(1.2);
+        box-shadow: inset 0 0 30px rgba(26, 188, 156, 0.2);
+    }
+}
+
+/* ================================================================
+   MODAL DIALOG (IMPROVEMENT 5)
+   ================================================================ */
+.place-modal {
+    border: none;
+    border-radius: 12px;
+    padding: 0;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: modalFade 0.3s ease;
+}
+
+.place-modal::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+@keyframes modalFade {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.place-modal .modal-content {
+    padding: 2rem;
+    position: relative;
+}
+
+.place-modal .modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s ease;
+    line-height: 1;
+}
+
+.place-modal .modal-close:hover {
+    color: #333;
+}
+
+.place-modal h2 {
+    color: #0B3C5D;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.place-modal address {
+    font-style: normal;
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.place-modal address::before {
+    content: "📍 ";
+}
+
+.place-modal #modal-description {
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+}

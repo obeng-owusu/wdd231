@@ -1,31 +1,32 @@
-// ===== Cache DOM elements =====
-const year = document.getElementById("year");
-const lastModified = document.getElementById("last-modified");
-const menuToggle = document.getElementById("menu-toggle");
-const nav = document.querySelector("nav");
+// scripts/main.js
 
-// ===== Footer Copyright Year =====
-if (year) {
-    year.textContent = new Date().getFullYear();
-}
+// ============================================
+// HAMBURGER MENU TOGGLE WITH ARIA-EXPANDED
+// ============================================
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('menu-toggle');
+    const primaryNav = document.getElementById('primary-nav');
 
-// ===== Last Modification Date =====
-if (lastModified) {
-    lastModified.textContent = document.lastModified;
-}
-
-// ===== Mobile Menu Toggle =====
-if (menuToggle && nav) {
-    menuToggle.addEventListener("click", () => {
-        nav.classList.toggle("open");
-        menuToggle.textContent = nav.classList.contains("open") ? "✕" : "☰";
-    });
-
-    // Close menu when a link is clicked (for mobile)
-    document.querySelectorAll("#primary-nav a").forEach(link => {
-        link.addEventListener("click", () => {
-            nav.classList.remove("open");
-            menuToggle.textContent = "☰";
+    if (menuToggle && primaryNav) {
+        menuToggle.addEventListener('click', function () {
+            const isOpen = primaryNav.classList.toggle('open');
+            // Update aria-expanded attribute
+            this.setAttribute('aria-expanded', isOpen);
         });
-    });
-}
+    }
+
+    // ============================================
+    // SET FOOTER YEAR & LAST MODIFIED
+    // ============================================
+    // Set current year
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+
+    // Set last modified date
+    const modifiedSpan = document.getElementById('last-modified');
+    if (modifiedSpan) {
+        modifiedSpan.textContent = document.lastModified;
+    }
+});

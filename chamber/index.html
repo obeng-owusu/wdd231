@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="styles/larger.css">
 
     <!-- JavaScript - in head with defer -->
+    <script src="scripts/main.js" defer></script>
     <script src="scripts/index.js" defer></script>
 </head>
 
@@ -44,9 +45,14 @@
     <header>
         <div class="header-content">
             <div class="logo">
+                <!-- IMPROVEMENT 2: Logo already has dimensions, ensure image is optimized -->
                 <img src="images/logo.webp" alt="Chamber Logo" width="60" height="60">
             </div>
-            <button id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+            <!-- IMPROVEMENT 1: Added aria-expanded and aria-controls -->
+            <button id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
+                aria-controls="primary-nav">
+                ☰
+            </button>
         </div>
         <nav>
             <ul id="primary-nav">
@@ -68,7 +74,7 @@
             <picture>
                 <source srcset="images/hero-large.webp" media="(min-width: 1024px)">
                 <source srcset="images/hero-medium.webp" media="(min-width: 640px)">
-                <img src="images/hero-small.webp" alt="City Chamber of Commerce">
+                <img src="images/hero-small.webp" alt="City Chamber of Commerce" width="1200" height="600">
             </picture>
             <div class="hero-content">
                 <h2>Welcome to the City Chamber of Commerce</h2>
