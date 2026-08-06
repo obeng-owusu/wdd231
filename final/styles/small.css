@@ -571,8 +571,9 @@ h3 {
     color: var(--text-dark);
 }
 
+/* FIX: Darker red for better contrast (WCAG AA compliant) */
 .required {
-    color: #e74c3c;
+    color: #b00020;
     font-weight: 700;
 }
 
@@ -603,11 +604,11 @@ h3 {
 }
 
 .form-group input:invalid:not(:placeholder-shown) {
-    border-color: #e74c3c;
+    border-color: #b00020;
 }
 
 .form-group input:invalid:not(:placeholder-shown):focus {
-    box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.1);
+    box-shadow: 0 0 0 4px rgba(176, 0, 32, 0.1);
 }
 
 .form-group input::placeholder,
