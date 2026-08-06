@@ -99,6 +99,7 @@ function createModalContent(country) {
     const maps = country.maps?.googleMaps || '#';
     const coatOfArms = country.coatOfArms?.png || '';
 
+    // IMPORTANT: h2 has id="modal-title" to match aria-labelledby in the HTML
     return `
         <h2 id="modal-title" tabindex="-1">${name}</h2>
         <img src="${flag}" alt="Flag of ${name}" style="max-width:150px; border-radius:8px; margin:0.5rem 0;" loading="lazy" decoding="async">
