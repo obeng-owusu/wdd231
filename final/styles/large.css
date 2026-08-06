@@ -1,0 +1,278 @@
+/* large.css - Desktop and Tablet Styles */
+
+/* Tablet */
+@media (min-width: 768px) {
+    #hamburger {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+        gap: 1.5rem;
+        min-width: auto;
+    }
+
+    .nav-links li {
+        padding: 0;
+    }
+
+    .nav-links a {
+        padding: 0.4rem 0;
+        border-left: none;
+        border-bottom: 3px solid transparent;
+    }
+
+    .nav-links a.active {
+        border-left-color: transparent;
+        border-bottom-color: var(--primary);
+        background: transparent;
+    }
+
+    .hero {
+        flex-direction: row;
+        text-align: left;
+        padding: 3rem 4rem;
+        min-height: 450px;
+        align-items: center;
+    }
+
+    .hero-content {
+        text-align: left;
+        flex: 1;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-content p {
+        margin: 0 0 1.25rem 0;
+    }
+
+    .hero picture {
+        flex: 1;
+        max-width: 50%;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+
+    .stats {
+        margin: 0 0 2rem 0;
+        padding: 1.5rem 2rem;
+        gap: 2rem;
+    }
+
+    .stat-item span {
+        font-size: 1.6rem;
+    }
+
+    .contact-form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #thankyou-data {
+        grid-template-columns: 1fr 1fr;
+        display: grid;
+        gap: 0.5rem;
+    }
+
+    #thankyou-data p {
+        border-bottom: none;
+    }
+
+    .attribution-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .filter-controls {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .filter-controls input {
+        max-width: 300px;
+    }
+
+    .filter-controls select {
+        max-width: 200px;
+    }
+
+    /* Weather */
+    .weather-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .weather-section {
+        padding: 2rem;
+        margin: 0 0 2rem 0;
+    }
+
+    /* Thank You */
+    .thankyou-actions {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 0;
+    }
+
+    .developer-info {
+        border-top: none;
+        padding-top: 0;
+        text-align: right;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .hero {
+        padding: 4rem 6rem;
+        gap: 4rem;
+        min-height: 500px;
+    }
+
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .featured,
+    .continents,
+    .destinations-header {
+        padding: 0;
+    }
+
+    .stats {
+        padding: 1.5rem 3rem;
+        gap: 3rem;
+    }
+
+    .contact-section,
+    .thankyou-section,
+    .attributions-section {
+        padding: 1rem 0;
+    }
+
+    .attribution-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .weather-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .weather-section {
+        padding: 2rem 3rem;
+        margin: 0 0 2rem 0;
+    }
+
+    .footer-content {
+        gap: 3rem;
+        padding: 0;
+    }
+
+    .contact-container,
+    .thankyou-container {
+        padding: 2.5rem;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+    .hero {
+        padding: 5rem 8rem;
+        min-height: 550px;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .featured,
+    .continents,
+    .destinations-header {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+/* Print Styles */
+@media print {
+
+    header,
+    footer,
+    .hero,
+    .stats,
+    .continent-buttons,
+    .filter-controls,
+    .card-actions,
+    .thankyou-actions,
+    .weather-section,
+    #hamburger {
+        display: none !important;
+    }
+
+    .country-card {
+        break-inside: avoid;
+        border: 1px solid #ddd;
+        box-shadow: none !important;
+    }
+
+    body {
+        background: white !important;
+        color: black !important;
+    }
+
+    .modal-content {
+        display: block !important;
+    }
+
+    dialog {
+        position: static !important;
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        max-height: none !important;
+        overflow: visible !important;
+        transform: none !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        background: white !important;
+    }
+
+    dialog::backdrop {
+        background: none !important;
+        backdrop-filter: none !important;
+    }
+
+    .modal-close {
+        display: none !important;
+    }
+
+    .skip-link {
+        display: none !important;
+    }
+
+    .contact-form {
+        display: block !important;
+    }
+
+    .form-group {
+        margin-bottom: 1rem !important;
+    }
+}

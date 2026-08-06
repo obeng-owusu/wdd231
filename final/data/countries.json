@@ -1,0 +1,361 @@
+{
+    "countries": [
+        {
+            "name": "Afghanistan",
+            "capital": "Kabul",
+            "region": "Asia",
+            "population": 38928341,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg"
+        },
+        {
+            "name": "Albania",
+            "capital": "Tirana",
+            "region": "Europe",
+            "population": 2877797,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Albania.svg"
+        },
+        {
+            "name": "Algeria",
+            "capital": "Algiers",
+            "region": "Africa",
+            "population": 43851043,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Algeria.svg"
+        },
+        {
+            "name": "Andorra",
+            "capital": "Andorra la Vella",
+            "region": "Europe",
+            "population": 77265,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Andorra.svg"
+        },
+        {
+            "name": "Angola",
+            "capital": "Luanda",
+            "region": "Africa",
+            "population": 32866268,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Angola.svg"
+        },
+        {
+            "name": "Argentina",
+            "capital": "Buenos Aires",
+            "region": "Americas",
+            "population": 45376763,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg"
+        },
+        {
+            "name": "Armenia",
+            "capital": "Yerevan",
+            "region": "Asia",
+            "population": 2963234,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_Armenia.svg"
+        },
+        {
+            "name": "Australia",
+            "capital": "Canberra",
+            "region": "Oceania",
+            "population": 25687041,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/8/88/Flag_of_Australia.svg"
+        },
+        {
+            "name": "Austria",
+            "capital": "Vienna",
+            "region": "Europe",
+            "population": 8917205,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_Austria.svg"
+        },
+        {
+            "name": "Azerbaijan",
+            "capital": "Baku",
+            "region": "Asia",
+            "population": 10139177,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Flag_of_Azerbaijan.svg"
+        },
+        {
+            "name": "Bahamas",
+            "capital": "Nassau",
+            "region": "Americas",
+            "population": 393248,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/9/93/Flag_of_the_Bahamas.svg"
+        },
+        {
+            "name": "Bahrain",
+            "capital": "Manama",
+            "region": "Asia",
+            "population": 1701583,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Bahrain.svg"
+        },
+        {
+            "name": "Bangladesh",
+            "capital": "Dhaka",
+            "region": "Asia",
+            "population": 164689383,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Bangladesh.svg"
+        },
+        {
+            "name": "Barbados",
+            "capital": "Bridgetown",
+            "region": "Americas",
+            "population": 287375,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Flag_of_Barbados.svg"
+        },
+        {
+            "name": "Belarus",
+            "capital": "Minsk",
+            "region": "Europe",
+            "population": 9398861,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/8/85/Flag_of_Belarus.svg"
+        },
+        {
+            "name": "Belgium",
+            "capital": "Brussels",
+            "region": "Europe",
+            "population": 11589623,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg"
+        },
+        {
+            "name": "Belize",
+            "capital": "Belmopan",
+            "region": "Americas",
+            "population": 397621,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Flag_of_Belize.svg"
+        },
+        {
+            "name": "Benin",
+            "capital": "Porto-Novo",
+            "region": "Africa",
+            "population": 12123198,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Benin.svg"
+        },
+        {
+            "name": "Bhutan",
+            "capital": "Thimphu",
+            "region": "Asia",
+            "population": 771612,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/9/91/Flag_of_Bhutan.svg"
+        },
+        {
+            "name": "Bolivia",
+            "capital": "Sucre",
+            "region": "Americas",
+            "population": 11673029,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Bolivia.svg"
+        },
+        {
+            "name": "Bosnia and Herzegovina",
+            "capital": "Sarajevo",
+            "region": "Europe",
+            "population": 3280815,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Flag_of_Bosnia_and_Herzegovina.svg"
+        },
+        {
+            "name": "Botswana",
+            "capital": "Gaborone",
+            "region": "Africa",
+            "population": 2351627,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_Botswana.svg"
+        },
+        {
+            "name": "Brazil",
+            "capital": "Brasília",
+            "region": "Americas",
+            "population": 213993437,
+            "flag": "https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg"
+        },
+        {
+            "name": "Brunei",
+            "capital": "Bandar Seri Begawan",
+            "region": "Asia",
+            "population": 437483,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Brunei.svg"
+        },
+        {
+            "name": "Bulgaria",
+            "capital": "Sofia",
+            "region": "Europe",
+            "population": 6948445,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Bulgaria.svg"
+        },
+        {
+            "name": "Burkina Faso",
+            "capital": "Ouagadougou",
+            "region": "Africa",
+            "population": 20903278,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/3/31/Flag_of_Burkina_Faso.svg"
+        },
+        {
+            "name": "Cambodia",
+            "capital": "Phnom Penh",
+            "region": "Asia",
+            "population": 16718971,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_Cambodia.svg"
+        },
+        {
+            "name": "Cameroon",
+            "capital": "Yaoundé",
+            "region": "Africa",
+            "population": 26545864,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Flag_of_Cameroon.svg"
+        },
+        {
+            "name": "Canada",
+            "capital": "Ottawa",
+            "region": "Americas",
+            "population": 38005238,
+            "flag": "https://upload.wikimedia.org/wikipedia/en/c/ca/Flag_of_Canada.svg"
+        },
+        {
+            "name": "Chile",
+            "capital": "Santiago",
+            "region": "Americas",
+            "population": 19116209,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg"
+        },
+        {
+            "name": "China",
+            "capital": "Beijing",
+            "region": "Asia",
+            "population": 1444216107,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg"
+        },
+        {
+            "name": "Colombia",
+            "capital": "Bogotá",
+            "region": "Americas",
+            "population": 50882884,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
+        },
+        {
+            "name": "Costa Rica",
+            "capital": "San José",
+            "region": "Americas",
+            "population": 5094114,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg"
+        },
+        {
+            "name": "Croatia",
+            "capital": "Zagreb",
+            "region": "Europe",
+            "population": 4105267,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Flag_of_Croatia.svg"
+        },
+        {
+            "name": "Cuba",
+            "capital": "Havana",
+            "region": "Americas",
+            "population": 11326616,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Flag_of_Cuba.svg"
+        },
+        {
+            "name": "Cyprus",
+            "capital": "Nicosia",
+            "region": "Europe",
+            "population": 1207361,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Cyprus.svg"
+        },
+        {
+            "name": "Czech Republic",
+            "capital": "Prague",
+            "region": "Europe",
+            "population": 10708981,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_Czech_Republic.svg"
+        },
+        {
+            "name": "Denmark",
+            "capital": "Copenhagen",
+            "region": "Europe",
+            "population": 5831404,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Denmark.svg"
+        },
+        {
+            "name": "Dominican Republic",
+            "capital": "Santo Domingo",
+            "region": "Americas",
+            "population": 10847910,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_the_Dominican_Republic.svg"
+        },
+        {
+            "name": "Ecuador",
+            "capital": "Quito",
+            "region": "Americas",
+            "population": 17643060,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Flag_of_Ecuador.svg"
+        },
+        {
+            "name": "Egypt",
+            "capital": "Cairo",
+            "region": "Africa",
+            "population": 102334403,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg"
+        },
+        {
+            "name": "France",
+            "capital": "Paris",
+            "region": "Europe",
+            "population": 67391582,
+            "flag": "https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg"
+        },
+        {
+            "name": "Germany",
+            "capital": "Berlin",
+            "region": "Europe",
+            "population": 83783942,
+            "flag": "https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg"
+        },
+        {
+            "name": "India",
+            "capital": "New Delhi",
+            "region": "Asia",
+            "population": 1380004385,
+            "flag": "https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg"
+        },
+        {
+            "name": "Japan",
+            "capital": "Tokyo",
+            "region": "Asia",
+            "population": 125836021,
+            "flag": "https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg"
+        },
+        {
+            "name": "Mexico",
+            "capital": "Mexico City",
+            "region": "Americas",
+            "population": 128932753,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg"
+        },
+        {
+            "name": "New Zealand",
+            "capital": "Wellington",
+            "region": "Oceania",
+            "population": 4822233,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_New_Zealand.svg"
+        },
+        {
+            "name": "Nigeria",
+            "capital": "Abuja",
+            "region": "Africa",
+            "population": 206139587,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nigeria.svg"
+        },
+        {
+            "name": "South Africa",
+            "capital": "Pretoria",
+            "region": "Africa",
+            "population": 59308690,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg"
+        },
+        {
+            "name": "United Kingdom",
+            "capital": "London",
+            "region": "Europe",
+            "population": 67886011,
+            "flag": "https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
+        },
+        {
+            "name": "United States",
+            "capital": "Washington D.C.",
+            "region": "Americas",
+            "population": 331002651,
+            "flag": "https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
+        }
+    ]
+}

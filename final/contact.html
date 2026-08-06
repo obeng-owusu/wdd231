@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - World Travel Explorer</title>
+    <meta name="description" content="Contact us for travel inquiries and assistance.">
+    <meta name="author" content="Joshua Obeng">
+    <meta property="og:title" content="Contact - World Travel Explorer">
+    <meta property="og:image" content="images/hero.webp">
+    <meta property="og:description" content="Get in touch with our travel experts.">
+    <meta property="og:url" content="https://obeng-owusu.github.io/wdd231/final/contact.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact - World Travel Explorer">
+    <meta name="twitter:description" content="Get in touch with our travel experts.">
+    <meta name="twitter:image" content="images/hero.webp">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="images/logo.webp" alt="World Travel Explorer logo" width="48" height="48" loading="eager"
+                    decoding="async">
+            </a>
+            <span class="brand">Travel Explorer</span>
+        </div>
+        <nav id="main-nav" aria-label="Primary Navigation">
+            <button id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"
+                aria-controls="primary-nav">
+                ☰
+            </button>
+            <ul id="primary-nav" class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" class="contact-main">
+        <section class="contact-section">
+            <div class="contact-container">
+                <div class="contact-header">
+                    <div class="contact-icon">✉️</div>
+                    <h1>Get In Touch</h1>
+                    <p>Fill out the form below and our travel experts will get back to you within 24 hours.</p>
+                </div>
+
+                <form id="travel-form" action="thankyou.html" method="get">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">First Name <span class="required">*</span></label>
+                            <input type="text" id="first-name" name="firstName" required aria-required="true"
+                                autocomplete="given-name" minlength="2" maxlength="50" pattern="[A-Za-z\s\-]{2,50}"
+                                placeholder="John">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="last-name">Last Name <span class="required">*</span></label>
+                            <input type="text" id="last-name" name="lastName" required aria-required="true"
+                                autocomplete="family-name" minlength="2" maxlength="50" pattern="[A-Za-z\s\-]{2,50}"
+                                placeholder="Doe">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required aria-required="true" autocomplete="email"
+                            placeholder="you@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="destination">Preferred Destination <span class="required">*</span></label>
+                        <input type="text" id="destination" name="destination" required aria-required="true"
+                            placeholder="e.g., Japan, France, Brazil" minlength="2" maxlength="100">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="travel-date">Travel Date</label>
+                            <input type="date" id="travel-date" name="travelDate">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="travelers">Number of Travelers</label>
+                            <input type="number" id="travelers" name="travelers" min="1" max="20" value="1">
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="comments">Additional Comments</label>
+                        <textarea id="comments" name="comments" rows="4" maxlength="500"
+                            placeholder="Any special requirements or preferences?"></textarea>
+                    </div>
+
+                    <button type="submit" class="cta-button submit-btn">
+                        <span>Submit Inquiry</span>
+                        <span class="arrow">→</span>
+                    </button>
+                </form>
+
+                <div class="contact-alternate">
+                    <p>Or reach us directly:</p>
+                    <div class="contact-links">
+                        <a href="tel:+15557890123" class="contact-link">
+                            <span class="contact-link-icon">📞</span>
+                            (555) 789-0123
+                        </a>
+                        <a href="mailto:info@travelexplorer.com" class="contact-link">
+                            <span class="contact-link-icon">✉️</span>
+                            info@travelexplorer.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>World Travel Explorer</h3>
+                <p>📍 123 Travel Street, Adventure City, World 54321</p>
+                <p>📞 <a href="tel:+15557890123">(555) 789-0123</a></p>
+                <p>✉️ <a href="mailto:info@travelexplorer.com">info@travelexplorer.com</a></p>
+            </div>
+            <div class="developer-info">
+                <p>© <span id="year"></span> World Travel Explorer</p>
+                <p>Developed by Joshua Obeng - WDD 231</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+                <p>
+                    <a href="attributions.html">Attributions</a> |
+                    <a href="contact.html">Contact</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js" type="module"></script>
+</body>
+
+</html>

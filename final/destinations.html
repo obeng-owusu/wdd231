@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - World Travel Explorer</title>
+    <meta name="description" content="Search and filter countries, save your favorite destinations.">
+    <meta name="author" content="Joshua Obeng">
+    <meta property="og:title" content="Destinations - World Travel Explorer">
+    <meta property="og:image" content="images/hero.webp">
+    <meta property="og:description" content="Browse all countries, search, filter by region, and save favorites.">
+    <meta property="og:url" content="https://obeng-owusu.github.io/wdd231/final/destinations.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Destinations - World Travel Explorer">
+    <meta name="twitter:description" content="Browse all countries, search, filter by region, and save favorites.">
+    <meta name="twitter:image" content="images/hero.webp">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="images/logo.webp" alt="World Travel Explorer logo" width="48" height="48" loading="eager"
+                    decoding="async">
+            </a>
+            <span class="brand">Travel Explorer</span>
+        </div>
+        <nav id="main-nav" aria-label="Primary Navigation">
+            <button id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"
+                aria-controls="primary-nav">
+                ☰
+            </button>
+            <ul id="primary-nav" class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html" class="active" aria-current="page">Destinations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="destinations-header">
+            <h1>Explore All Countries</h1>
+            <div class="filter-controls">
+                <label for="search-input" class="visually-hidden">Search Countries</label>
+                <input type="text" id="search-input" placeholder="Search by country name..."
+                    aria-label="Search countries">
+                <select id="filter-select" aria-label="Filter by region">
+                    <option value="all">All Regions</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Americas">Americas</option>
+                    <option value="Oceania">Oceania</option>
+                    <option value="Antarctic">Antarctic</option>
+                </select>
+            </div>
+            <div class="card-grid" id="featured-grid">
+                <!-- Dynamically populated -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>World Travel Explorer</h3>
+                <p>📍 123 Travel Street, Adventure City, World 54321</p>
+                <p>📞 <a href="tel:+15557890123">(555) 789-0123</a></p>
+                <p>✉️ <a href="mailto:info@travelexplorer.com">info@travelexplorer.com</a></p>
+            </div>
+            <div class="developer-info">
+                <p>© <span id="year"></span> World Travel Explorer</p>
+                <p>Developed by Joshua Obeng - WDD 231</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+                <p>
+                    <a href="attributions.html">Attributions</a> |
+                    <a href="contact.html">Contact</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Dialog with improved accessibility -->
+    <dialog id="country-modal" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" aria-label="Close modal">✕</button>
+        <div class="modal-content" id="modal-content">
+            <!-- Dynamically populated -->
+        </div>
+    </dialog>
+
+    <script src="scripts/main.js" type="module"></script>
+</body>
+
+</html>
